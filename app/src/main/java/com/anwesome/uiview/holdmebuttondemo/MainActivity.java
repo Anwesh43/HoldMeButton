@@ -1,6 +1,7 @@
 package com.anwesome.uiview.holdmebuttondemo;
 
 import android.app.Dialog;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,12 +23,15 @@ public class MainActivity extends AppCompatActivity {
                 setupDialog();
             }
         });
+        holdMeButton.setHoldColor(Color.parseColor("#5E35B1"));
     }
     public void setupDialog() {
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.view_dialog);
         HoldMeButtonView a = (HoldMeButtonView)dialog.findViewById(R.id.a);
+        a.setHoldColor(Color.parseColor("#03A9F4"));
         HoldMeButtonView b = (HoldMeButtonView)dialog.findViewById(R.id.b);
+        b.setHoldColor(Color.parseColor("#26A69A"));
         setButtonAction(a,"A");
         setButtonAction(b,"B");
         HoldMeButtonView c = (HoldMeButtonView) dialog.findViewById(R.id.c);
