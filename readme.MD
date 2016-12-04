@@ -18,6 +18,13 @@
       }
   })
 ```
+
+###Changing Hold color for HoldMeButton
+
+```
+    holdMeButton.setHoldColor(holdColor)
+```
+
 ### In xml file
 ```
 <com.anwesome.uiview.holdmebutton.HoldMeButtonView
@@ -36,4 +43,10 @@
           ...//onClick code goes here
       }
   });
+```
+
+###Changing holdColor in HoldMeButtonView
+
+```
+  holdMeButtonView.setHoldColor(holdColor);
 ```
