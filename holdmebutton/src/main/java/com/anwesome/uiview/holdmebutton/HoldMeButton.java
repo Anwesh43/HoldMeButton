@@ -18,4 +18,10 @@ public class HoldMeButton {
     public void setOnClickListener(View.OnClickListener onClickListener) {
         holdMeButtonView.setOnClickListener(onClickListener);
     }
+    public void setDefaultColor(int defaultColor) {
+        holdMeButtonView.setDefaultColor(defaultColor);
+    }
+    public void setHoldColor(int holdColor) {
+        holdMeButtonView.setHoldColor(holdColor);
+    }
 }

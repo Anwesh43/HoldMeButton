@@ -58,4 +58,10 @@ public class HoldMeButtonView extends Button {
         postInvalidate();
         return true;
     }
+    public void setDefaultColor(int defaultColor) {
+        holdMeButtonDrawable.setDefaultColor(defaultColor);
+    }
+    public void setHoldColor(int holdColor) {
+        holdMeButtonDrawable.setHoldColor(holdColor);
+    }
 }
