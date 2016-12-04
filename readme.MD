@@ -18,3 +18,22 @@
       }
   })
 ```
+### In xml file
+```
+<com.anwesome.uiview.holdmebutton.HoldMeButtonView
+      android:layout_width="200dp"
+      android:layout_height="200dp"
+      android:id="@+id/button"
+      android:text="buttontext"/>
+```
+
+### Adding onClick Listener
+
+```
+  HoldMeButtonView button = (HoldMeButtonView)findViewById(R.id.button);
+  button.setOnClickListener(new Button.OnClickListener(){
+      public void onClick(View view) {
+          ...//onClick code goes here
+      }
+  });
+```
