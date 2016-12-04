@@ -1,5 +1,6 @@
 package com.anwesome.uiview.holdmebuttondemo;
 
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,31 @@ public class MainActivity extends AppCompatActivity {
         HoldMeButton holdMeButton = new HoldMeButton(this,"A",300,300);
         holdMeButton.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"A",Toast.LENGTH_SHORT).show();
+                setupDialog();
+            }
+        });
+    }
+    public void setupDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.view_dialog);
+        HoldMeButtonView a = (HoldMeButtonView)dialog.findViewById(R.id.a);
+        HoldMeButtonView b = (HoldMeButtonView)dialog.findViewById(R.id.b);
+        setButtonAction(a,"A");
+        setButtonAction(b,"B");
+        HoldMeButtonView c = (HoldMeButtonView) dialog.findViewById(R.id.c);
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+
+    }
+    private void setButtonAction(HoldMeButtonView button,final String text) {
+        button.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
             }
         });
     }
